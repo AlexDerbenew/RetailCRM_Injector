@@ -4,13 +4,13 @@
     "description": "Добавление ссылок на связаные заказы в RetailCRM для магазина якосметика.рф",
     "manifest_version": 2,
     "author": "Alex Derbenew",
-    "content_scripts" : [{
-        "matches" : ["https://yakosmetika.retailcrm.ru/orders/*/edit"],
-        "js" : ["content_script.js"]
-    }],
+    "background" : {
+      "scripts" : ["background.js"]
+    },
     "icons": { 
        "128": "128.png" 
     },
-    "permissions": ["tabs", "http://*/*"],
+    "browser_action": {},
+    "permissions": ["activeTab"],
     "web_accessible_resources": ["inject.js","link_64x64.png"]
    }
