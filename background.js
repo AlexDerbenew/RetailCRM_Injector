@@ -8,8 +8,6 @@ chrome.browserAction.onClicked.addListener(function(tab) {
 });
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab){
 	var currentURL = tab.url;
-	chrome.extension.getBackgroundPage().console.log(changeInfo.status);
-	chrome.extension.getBackgroundPage().console.log(currentURL);
 	if( currentURL.substr(0, 40) == "https://yakosmetika.retailcrm.ru/orders/" && currentURL.substr(-4, 4) == "edit" && changeInfo.status == "complete"){
 		chrome.tabs.executeScript(tabId, {file: "inject.js"});
 	}
