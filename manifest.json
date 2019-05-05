@@ -11,6 +11,10 @@
        "128": "128.png" 
     },
     "browser_action": {},
-    "permissions": ["activeTab"],
+    "permissions": [
+      "storage",
+      "tabs",
+      "activeTab",
+      "https://yakosmetika.retailcrm.ru/*"],
     "web_accessible_resources": ["inject.js","link_64x64.png"]
    }
